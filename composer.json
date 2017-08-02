@@ -1,9 +1,9 @@
 {
-    "name": "wbadrh/phpackage.json",
+    "name": "wbadrh/phpackage-json",
     "type": "library",
     "description": "Bundle Javascript & Stylesheets from package.json (Yarn) with PHP.",
     "keywords": ["minify", "minifier", "css", "js", "javascript", "stylesheet", "stylesheets", "Yarn", "package.json", "PHP", "bundle", "performance"],
-    "homepage": "https://github.com/wbadrh/phpackage.json",
+    "homepage": "https://github.com/wbadrh/phpackage-json",
     "license": "MIT",
     "require": {
         "php": ">=7.0.21",
