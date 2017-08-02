@@ -1,0 +1,6 @@
+node_modules/
+public_html/css/
+public_html/fonts/
+public_html/js/
+vendor/
+*.lock
