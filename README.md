@@ -19,6 +19,10 @@ $assets = new PHPackage(
     [
         // custom js
         __DIR__ . '/src/js/*'      // user javascript
+    ],
+    [
+        // exclude
+        'index.js',
     ]
 );
 
