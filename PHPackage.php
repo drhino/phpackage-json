@@ -18,10 +18,15 @@ class PHPackage
      * @param String $node_modules Location of node_modules directory
      * @param Array  $custom_css   Array of extra stylesheets and directories (/Users/username/css/*)
      * @param Array  $custom_js    Array of extra javascript files and directories (/Users/username/js/*)
+     * @param Array  $exclude      Array of excluded filenames (css & js)
      */
-    function __construct($package, $node_modules, $custom_css = [], $custom_js = [])
+    function __construct($package, $node_modules, $custom_css = [], $custom_js = [], $exclude = [])
     {
+        // save node modules location
         $this->node_modules = $node_modules;
+
+        // merge user exclude
+        $this->exclude = array_merge($this->exclude, $exclude);
 
         // yarn available
         $this->package($package);
