@@ -31,6 +31,10 @@ class PHPackage
         // yarn available
         $this->package($package);
 
+        // reverse package so dependency tree matches
+        $this->css = array_reverse($this->css);
+        $this->js  = array_reverse($this->js);
+
         // prioritize jquery
         // within found values of package.json
         // temporary fix as bootstrap 3.x doesn't have
