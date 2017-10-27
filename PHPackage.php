@@ -35,7 +35,7 @@ class PHPackage
         // within found values of package.json
         // temporary fix as bootstrap 3.x doesn't have
         // jquery as a dependency in it's package.json
-        // bootstrap 4.x works
+        // bootstrap 4.x works (not anymore ...)
         $endwith = '/jquery.min.js';
         foreach ($this->js as $index => $value)
             if (substr($value, (0 - strlen($endwith))) === $endwith)
@@ -100,8 +100,12 @@ class PHPackage
             // find plugin dependencies
             $this->package($package);
 
+            // search in dist/umd folder (popper.js)
+            $found = $this->analyzeFolder($plugin . '/dist/umd');
+
             // search in dist/ folder
-            $found = $this->analyzeFolder($plugin . '/dist');
+            if (!$found)
+                $found = $this->analyzeFolder($plugin . '/dist');
 
             // search in plugin folder
             if (!$found)
