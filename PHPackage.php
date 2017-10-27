@@ -114,6 +114,10 @@ class PHPackage
             if (!$found)
                 $found = $this->analyzeFolder($plugin . '/dist');
 
+            // search in lib/ folder
+            if (!$found)
+                $found = $this->analyzeFolder($plugin . '/lib');
+
             // search in plugin folder
             if (!$found)
                 $this->analyzeFolder($plugin, true);
