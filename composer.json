@@ -2,7 +2,7 @@
     "name": "wbadrh/phpackage-json",
     "type": "library",
     "description": "Bundle Javascript & Stylesheets from package.json (Yarn) with PHP.",
-    "keywords": ["minify", "minifier", "css", "js", "javascript", "stylesheet", "stylesheets", "Yarn", "package.json", "PHP", "bundle", "performance"],
+    "keywords": ["minify", "minifier", "css", "js", "javascript", "stylesheet", "stylesheets", "Yarn", "package.json", "PHP", "bundle", "performance", "bundle-javascript", "bundle-stylesheets", "bundle-js", "bundle-css", "bundle-fonts", "phpackage-json", "optimization", "optimalisation", "productivity", "speed", "pagespeed"],
     "homepage": "https://github.com/wbadrh/phpackage-json",
     "license": "MIT",
     "require": {
