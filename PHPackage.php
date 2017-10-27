@@ -35,7 +35,7 @@ class PHPackage
         // within found values of package.json
         // temporary fix as bootstrap 3.x doesn't have
         // jquery as a dependency in it's package.json
-        // bootstrap 4.x works (not anymore ...)
+        // bootstrap 4.x works (peerDependencies)
         $endwith = '/jquery.min.js';
         foreach ($this->js as $index => $value)
             if (substr($value, (0 - strlen($endwith))) === $endwith)
@@ -82,8 +82,11 @@ class PHPackage
         if (file_exists($package) && is_dir($this->node_modules)) {
             $deps = file_get_contents($package);
             $deps = json_decode($deps, true);
-            $deps = $deps['dependencies'] ?? false;
 
+            $deps = $deps['dependencies'] ?? false;
+            $this->analyzer($deps);
+
+            $deps = $deps['peerDependencies'] ?? false;
             $this->analyzer($deps);
         }
     }
